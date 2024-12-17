@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'Inter';
+        src: url(/public/fonts/Inter.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Roboto';
+        src: url(/public/fonts/Roboto.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Playwrite';
+        src: url(/public/fonts/Playwrite.ttf) format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Helvetica';
+        src: url(/public/fonts/Helvetica.ttf) format('truetype');
+    }
+}
+
