@@ -4,6 +4,17 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\SongController;
+use App\Http\Controllers\ArtistController;
+
+Route::resource('/artists', ArtistController::class);
+
+Route::get('/artists/{artist}/songs',
+    [ArtistController::class, 'createSong']
+)->name('artists.songs.create');
+
+Route::post('/artists/{artist}/songs',
+    [ArtistController::class, 'storeSong']
+)->name('artists.songs.store');
 
 Route::get('/', function () {
     return redirect()->route('about.index'); // เปลี่ยนชื่อ route ตามที่นิสิตกำหนด
